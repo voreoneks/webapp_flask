@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<h2>{{ the_title }}</h2>
+
+<p>Вы ввели эти данные:</p>
+<table>
+    <tr><td>Phrase:</td><td>{{ the_phrase }}</td></tr>
+    <tr><td>Letters:</td><td>{{ the_letters }}</td></tr>
+</table>
+
+<p>В процесее поиска букв "{{ the_letters }}" в фразе "{{ the_phrase }}" были найдены:</p>
+<h3>{{ the_results }}</h3>
+
+<form method="GET" action="/entry_rus">
+    <p><input value="Вернуться обратно" type="submit"></p>
+</form>
+
+{% endblock %}
